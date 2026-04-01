@@ -1,0 +1,173 @@
+<div class="royal_preloader">
+    <div id="page" class="site">
+
+        <div id="content" class="site-content">
+            <div class="page-header flex-middle">
+                <div class="container">
+                    <div class="inner flex-middle">
+                        <h1 class="page-title">Contact</h1>
+                        <ul id="breadcrumbs" class="breadcrumbs none-style">
+                            <li><a routerLink="/">Home</a></li>
+                            <li class="active">Contact</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <section class="contact-page about-team">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="contact-left">
+                                <div class="ot-heading">
+                                    <span>// Contact Details</span>
+                                    <h2 class="main-heading">Let's Connect</h2>
+                                </div>
+                                <div class="space-5"></div>
+                                <p>Have a question, need support, or want to explore how we can help your business
+                                    thrive? Our friendly team is just a message away.</p>
+                                <div class="contact-info box-style1">
+                                    <i class="flaticon-world-globe"></i>
+                                    <div class="info-text">
+                                        <h6>Our Address:</h6>
+                                        <p>393 N Mill Valley Dr, Tracy, CA 95391</p>
+                                    </div>
+                                </div>
+                                <div class="contact-info box-style1">
+                                    <i class="flaticon-envelope"></i>
+                                    <div class="info-text">
+                                        <h6>Our Mailbox:</h6>
+                                        <p><a href="mailto:hr@trebecon.com">hr&#64;trebecon.com</a></p>
+
+                                    </div>
+                                </div>
+                                <div class="contact-info box-style1">
+                                    <i class="flaticon-phone-1"></i>
+                                    <div class="info-text">
+                                        <h6>Our Phone:</h6>
+                                        <p><a href="tel:(650) 514-6999">(650) 514-6999</a></p>
+                                        <!-- <p>(650) 514-6999</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <form id="ajax-form" #contactForm="ngForm" (ngSubmit)="onSubmit()" class="wpcf7">
+                                <div class="main-form">
+                                    <h2>LET'S DISCUSS YOUR PROJECT</h2>
+                                    <p class="font14">Get in touch with our specialists to discuss your project</p>
+                                    <p>
+                                        <label for="name"> <span class="error" id="err-name">please enter
+                                                name</span></label>
+                                        <input type="text" value="" size="40" class="" aria-required="true"
+                                            aria-invalid="false" placeholder="Your Name *" name="name"
+                                            [(ngModel)]="formData.name" (input)="clearError('name')">
+
+                                    </p>
+                                    <div class="text-danger" *ngIf="formErrors.name">{{formErrors.name}}</div>
+                                    
+                                    <div class="country-code mb-3">
+                                        <label for="phonenumber">
+                                            <span class="error" id="err-phonenumber">Please enter phone number</span>
+                                            <span class="error" id="err-phonenumbervld">Please enter valid phone
+                                                number</span>
+                                        </label>
+
+                                    
+                                        <select [(ngModel)]="formData.countryCode" name="countryCode"
+                                            class="country-select" style="display: none;">
+                                            <option *ngFor="let country of countryList" [value]="country.code">
+                                                {{ country.code }} ({{ country.name }})
+                                            </option>
+                                        </select>
+                                        <div class="phone-input-container">
+                                        
+                                        <div class="custom-country-dropdown" [class.open]="isDropdownOpen">
+                                            <div class="selected-option" (click)="toggleDropdown()">
+                                                <img [src]="'https://flagcdn.com/w20/' + getSelectedCountryFlag() + '.png'" 
+                                                     [alt]="getSelectedCountryName()" 
+                                                     class="flag-icon">
+                                                <span>{{ formData.countryCode }} </span>
+                                                <i class="fas fa-chevron-down dropdown-arrow"></i>
+                                            </div>
+                                            <div class="dropdown-options" *ngIf="isDropdownOpen">
+                                                <div *ngFor="let country of countryList" 
+                                                     class="dropdown-option"
+                                                     (click)="selectCountry(country)">
+                                                    <img [src]="'https://flagcdn.com/w20/' + country.flag + '.png'" 
+                                                         [alt]="country.name" 
+                                                         class="flag-icon">
+                                                    <span>{{ country.code }} ({{ country.name }})</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <input type="tel" name="phonenumber" id="phonenumber" size="40"
+                                            placeholder="Phone Number *" [(ngModel)]="formData.phonenumber"
+                                            (input)="clearError('phonenumber')" aria-required="true"
+                                            aria-invalid="false" />
+
+                                           
+                                        </div>
+
+                                    </div>
+                                     <div class="text-danger" *ngIf="formErrors.phonenumber">{{formErrors.phonenumber}}</div>
+
+                                    <p>
+                                        <label for="email">
+                                            <span class="error" id="err-email">please enter e-mail</span>
+                                            <span class="error" id="err-emailvld">e-mail is not a valid format</span>
+                                        </label>
+                                        <input type="email" name="email" id="email" value="" size="40" class=""
+                                            aria-required="true" aria-invalid="false" placeholder="Your Email *"
+                                            [(ngModel)]="formData.email" (input)="clearError('email')">
+                                    </p>
+                                    <div class="text-danger" *ngIf="formErrors.email">{{formErrors.email}}</div>
+                                    <p>
+
+
+                                        <label for="message"></label>
+                                        <textarea name="message" id="message" cols="40" rows="10" class=""
+                                            aria-invalid="false" placeholder="Message..." [(ngModel)]="formData.message"
+                                            (input)="clearError('message')"></textarea>
+                                    </p>
+
+                                  
+
+
+                                    <p><button type="submit" id="send" [disabled]="formSubmitted"
+                                            class="octf-btn octf-btn-light">
+                                            <div class="spinner-border" *ngIf="formSubmitted" role="status"> </div> Send
+                                            Message
+                                        </button></p>
+
+                                          <div class="text-danger" *ngIf="formErrors.message"> {{formErrors.message}}</div>
+                                    <div class="text-danger" *ngIf="errorMessage"> {{errorMessage}}</div>
+                                    <div class="text-success" *ngIf="successMessage"> {{successMessage}}</div>
+                                    
+                                    <div class="clear"></div>
+                                    <div class="error" id="err-form">There was a problem validating the form please
+                                        check!</div>
+                                    <div class="error" id="err-timedout">The connection to the server timed out!</div>
+                                    <div class="error" id="err-state"></div>
+                                </div>
+                            </form>
+                            <div class="clear"></div>
+                            <div id="ajaxsuccess">Successfully sent!!</div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="no-padding">
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.253170959082!2d-121.55785692358671!3d37.78410621162148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80901ec0bc15ec15%3A0x44116c60829921f1!2s393%20N%20Mill%20Valley%20Dr%2C%20Tracy%2C%20CA%2095391%2C%20USA!5e0!3m2!1sen!2sin!4v1753426698492!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="space-120"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

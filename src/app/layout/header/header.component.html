@@ -1,0 +1,874 @@
+<header id="site-header" class="site-header sticky-header header-static">
+	<!-- Main Header start -->
+	<div class="header-topbar style-2">
+		<div class="octf-area-wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<ul class="social-list">
+							<li><a href="https://x.com/Trebecon" target="_self"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="https://www.google.com/search?q=Trebecon&stick=H4sIAAAAAAAA_-NgU1I2qDBNTEk0NDdIs0w2STSxTLEyqDBKMzY0Nk8xNkxMTjWytFjEyhFSlJqUmpyfBwBjYHwEMgAAAA&hl=en&mat=CZyBASaWJyZxElcBYJahaSW2EebTRrcvXa-RiRU46bjcGEieqacpF6O032UuRv6FasuSB90z10qyBWpYq8JhG2uk-ro3qXy_JEfPIiNkQuRuKeYseW-iG5GG_QDMGdOgRsQ&authuser=0"
+									target="_self"><i class="fab fa-google"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/trebeconllc" target="_self"><i
+										class="fab fa-linkedin-in"></i></a></li>
+							<li><a href="https://www.instagram.com/trebecon/" target="_self"><i
+										class="fab fa-instagram"></i></a></li>
+						</ul>
+					</div>
+					<div class="col-md-8">
+						<ul class="topbar-info align-self-end clearfix">
+							<li><a href="tel:(650) 514-6999"><i class="fas fa-phone-alt"></i> (650) 514-6999</a></li>
+							<li><a href="mailto:hr@trebecon.com"><i class="fas fa-envelope"></i> hr&#64;trebecon.com</a>
+							</li>
+							<li><a href="/contact-us"><i class="fas fa-phone-alt"></i>Contact Us</a></li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="octf-main-header">
+		<div class="octf-area-wrap">
+			<div class="container-fluid octf-mainbar-container">
+				<div class="octf-mainbar">
+					<div class="octf-mainbar-row octf-row">
+						<div class="octf-col logo-col">
+							<div id="site-logo" class="site-logo">
+								<a routerLink="/" (click)="navigateToIndustry('/')">
+									<img src="assets/images/client-logos/trebecon-final-logo.png" alt="Trebecon"
+										class="">
+								</a>
+							</div>
+						</div>
+						<div class="octf-col menu-col">
+							<nav id="site-navigation" class="main-navigation">
+								<ul class="menu">
+									<li>
+										<a routerLink="/" (click)="navigateToIndustry('/')">
+											<img src="assets/images/client-logos/home.png" class="home-img"
+												alt="Trebecon" />
+										</a>
+									</li>
+
+									<li>
+										<a routerLink="/about" (click)="navigateToIndustry('/about')">About Us</a>
+									</li>
+
+									<li class="menu-item-has-children position-relative">
+										<a href="#">Services</a>
+										<div class="custom-megamenu-fullwidth">
+											<div class="row g-0">
+												<div class="col-lg-4">
+													<div
+														class="d-flex p-5 flex-column text-uppercase bg-light dropdown-card-padding">
+
+
+														<a class="subMenuItems py-2 services-menu-trigger"
+															routerLink="/software-development-services"
+															data-target="software-development-services"
+															(click)="navigateToService('/software-development-services')">Software
+															Development
+															Services</a>
+														<a class="subMenuItems py-2 services-menu-trigger"
+															routerLink="/it-staffing-services"
+															data-target="it-staffing-services"
+															(click)="navigateToService('/it-staffing-services')">IT
+															Staffing Services</a>
+														<a class="subMenuItems py-2 services-menu-trigger"
+															routerLink="/technology-services"
+															data-target="technology-services"
+															(click)="navigateToService('/technology-services')">Technology
+															Services </a>
+													</div>
+												</div>
+												<div class="col-lg-4">
+													<!-- Default image -->
+													<div class="mt-3 mb-3 services-default-image">
+														<img src="assets\images\projects\project-gallery-1.jpg"
+															class="rounded" alt="Trebecon">
+													</div>
+													<div class="dynamic-content-container">
+
+														<!-- Software development Services dynamic content -->
+														<div class="services-dynamic-content software-development-services"
+															style="display: none;">
+
+															<div
+																class="d-flex p-5 flex-column text-uppercase dropdown-card-padding">
+
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/software-development-services"
+																	fragment="fixed-cost-product-solutions">Fixed-Cost
+																	Product Solutions
+																</a>
+
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/software-development-services"
+																	fragment="custom-software-development">Custom
+																	Software
+																	Development
+																</a>
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/software-development-services"
+																	fragment="mobile-app-development">
+																	Mobile & Web App
+																	Development
+																</a>
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/software-development-services"
+																	fragment="cloud-devops-services"> Cloud
+																	& DevOps
+																	Services
+																</a>
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/software-development-services"
+																	fragment="qa-automation"> QA &
+																	Automation
+																</a>
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/software-development-services"
+																	fragment="data-analytics-ai">Data
+																	Analytics & AI
+																</a>
+															</div>
+														</div>
+
+
+														<!-- IT staffing Services dynamic content -->
+														<div class="services-dynamic-content it-staffing-services"
+															style="display: none;">
+															<div
+																class="d-flex p-5 flex-column text-uppercase dropdown-card-padding">
+
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/it-staffing-services"
+																	fragment="flexible-engagement-models">Flexible
+																	Engagement Models
+																</a>
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/it-staffing-services"
+																	fragment="staff-augmentation">Staff Augmentation
+																</a>
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/it-staffing-services"
+																	fragment="contract-to-hire">Contract-to-Hire</a>
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/it-staffing-services"
+																	fragment="dedicated-teams">Dedicated Teams
+																</a>
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/it-staffing-services"
+																	fragment="immigration-support">Immigration
+																	Support
+																</a>
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/it-staffing-services"
+																	fragment="managed-services-provider">Managed
+																	Services
+																	Provider
+																</a>
+
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/it-staffing-services"
+																	fragment="direct-client-placements">Direct
+																	Client
+																	Placements
+																</a>
+
+															</div>
+														</div>
+														<!-- Technology Services dynamic content -->
+														<div class="services-dynamic-content technology-services"
+															style="display: none;">
+															<div
+																class="d-flex p-5 flex-column text-uppercase dropdown-card-padding">
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/technology-services"
+																	fragment="enterprise-sol">Enterprise
+																	Solutions
+																</a>
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/technology-services"
+																	fragment="emerging-tech">AI/ML &
+																	Emerging
+																	Tech</a>
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/technology-services"
+																	fragment="business-process">Business
+																	Process
+																	Outsourcing
+																</a>
+															</div>
+														</div>
+
+
+													</div>
+												</div>
+
+
+												<div class="col-lg-4 p-5 bg-white ">
+													<p class="fw-bold fs-5">
+														Empowering digital transformation with expertise, innovation,
+														reliability, precision, insight, trust, and growth.
+													</p>
+												</div>
+											</div>
+										</div>
+									</li>
+
+
+									<li class="menu-item-has-children position-relative">
+										<a href="#">Industries</a>
+										<div class="custom-megamenu-fullwidth">
+											<div class="row g-0">
+												<div class="col-lg-4">
+													<div
+														class="d-flex p-5 flex-column text-uppercase bg-light dropdown-card-padding ">
+														<a class="subMenuItems py-2" routerLink="/insurance"
+															(click)="navigateToIndustry('/insurance')">Insurance</a>
+														<a class="subMenuItems py-2" routerLink="/finance"
+															(click)="navigateToIndustry('/finance')">Finance</a>
+														<a class="subMenuItems py-2" routerLink="/retail"
+															(click)="navigateToIndustry('/retail')">Retail</a>
+														<a class="subMenuItems py-2" routerLink="/health-care"
+															(click)="navigateToIndustry('/health-care')">Health
+															Care</a>
+														<a class="subMenuItems py-2" routerLink="/energy-utilities"
+															(click)="navigateToIndustry('/energy-utilities')">Energy
+															&
+															Utilities</a>
+														<a class="subMenuItems py-2" routerLink="/telecommunications"
+															(click)="navigateToIndustry('/telecommunications')">Telecommunications</a>
+														<a class="subMenuItems py-2" routerLink="/public-sector"
+															(click)="navigateToIndustry('/public-sector')">Public
+															Sector</a>
+													</div>
+												</div>
+												<div class="col-lg-4">
+													<div class="mt-3 mb-3">
+														<img src="assets/images/projects/project-gallery-3.jpg"
+															class="rounded" alt="Trebecon">
+													</div>
+												</div>
+												<div class="col-lg-4 p-5 bg-white ">
+													<p class="fw-bold fs-5">
+														Empowering industries with innovative technology solutions for
+														seamless growth and digital transformation.
+													</p>
+												</div>
+											</div>
+										</div>
+									</li>
+
+									<li class="menu-item-has-children position-relative list-unstyled">
+										<a href="#">Technologies</a>
+										<div class="custom-megamenu-fullwidth">
+											<div class="row g-0">
+												<div class="col-lg-4">
+													<div
+														class="d-flex p-5 flex-column text-uppercase bg-light dropdown-card-padding">
+														<a routerLink="/web-technologies"
+															class="subMenuItems py-2 technologies-menu-trigger web-tech-redirect"
+															data-target="web-tec"
+															(click)="navigateToTechnology('/web-technologies')">Web
+															Technologies</a>
+
+														<a class="subMenuItems py-2 technologies-menu-trigger web-tech-redirect"
+															routerLink="/cloud-platforms" data-target="cloud-platform"
+															(click)="navigateToTechnology('/cloud-platforms')">Cloud
+															Platforms</a>
+														<a class="subMenuItems py-2 technologies-menu-trigger web-tech-redirect"
+															routerLink="/data-analytics" data-target="data-analytics"
+															(click)="navigateToTechnology('/data-analytics')">Data
+															Analytics</a>
+														<a class="subMenuItems py-2 technologies-menu-trigger web-tech-redirect"
+															routerLink="/ai-ml-frameworks" data-target="ai-frame"
+															(click)="navigateToTechnology('/ai-ml-frameworks')">AI/ML
+															Frameworks</a>
+														<a class="subMenuItems py-2 technologies-menu-trigger web-tech-redirect"
+															routerLink="/erp-platforms" data-target="erp-platform"
+															(click)="navigateToTechnology('/erp-platforms')">ERP
+															Platforms</a>
+														<a class="subMenuItems py-2 technologies-menu-trigger web-tech-redirect"
+															routerLink="/cybersecurity-tools" data-target="cyber-tools"
+															(click)="navigateToTechnology('/cybersecurity-tools')">Cybersecurity
+															Tools</a>
+													</div>
+												</div>
+
+												<div class="col-lg-4">
+													<!-- Default image -->
+													<div class="mt-3 mb-3 services-default-image">
+														<img src="assets/images/home/technologies.webp" class="rounded"
+															alt="Trebecon">
+													</div>
+													<div class="dynamic-content-container">
+
+														<!-- Web Technologies dynamic content -->
+														<div class="technologies-dynamic-content web-tec"
+															style="display: none;">
+															<div
+																class="d-flex p-5 flex-column text-uppercase dropdown-card-padding">
+																<a class="subMenuItems py-2 sub-menu javascript-trigger javascript-redirect"
+																	routerLink="/web-technologies"
+																	fragment="java-script">JavaScript</a>
+																<a class="subMenuItems py-2 sub-menu non-js-item"
+																	routerLink="/web-technologies"
+																	fragment=".net">.NET</a>
+																<a class="subMenuItems py-2 sub-menu non-js-item"
+																	routerLink="/web-technologies"
+																	fragment="java">Java</a>
+																<a class="subMenuItems py-2 sub-menu non-js-item"
+																	routerLink="/web-technologies"
+																	fragment="python">Python</a>
+															</div>
+														</div>
+
+														<!-- Data Analytics dynamic content -->
+														<div class="technologies-dynamic-content data-analytics"
+															style="display: none;">
+															<div
+																class="d-flex p-5 flex-column text-uppercase dropdown-card-padding">
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/data-analytics"
+																	fragment="power-bi">Power
+																	BI</a>
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/data-analytics"
+																	fragment="tableau">Tableau</a>
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/data-analytics"
+																	fragment="snowflake">Snowflake</a>
+															</div>
+														</div>
+
+														<!-- Cloud Platforms dynamic content -->
+														<div class="technologies-dynamic-content cloud-platform"
+															style="display: none;">
+															<div
+																class="d-flex p-5 flex-column text-uppercase dropdown-card-padding">
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/cloud-platforms"
+																	fragment="amazon-web">AWS</a>
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/cloud-platforms"
+																	fragment="microsoft">Azure</a>
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/cloud-platforms"
+																	fragment="gcp-platform">Google
+																	Cloud</a>
+															</div>
+														</div>
+
+														<!-- Cybersecurity Tools dynamic content -->
+														<div class="technologies-dynamic-content cyber-tools"
+															style="display: none;">
+															<div
+																class="d-flex p-5 flex-column text-uppercase dropdown-card-padding">
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/cybersecurity-tools"
+																	fragment="siem">SIEM
+																	Solutions</a>
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/cybersecurity-tools"
+																	fragment="endpoint">Endpoint
+																	Protection</a>
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/cybersecurity-tools"
+																	fragment="identity">IAM</a>
+															</div>
+														</div>
+
+														<!-- AI/ML Frameworks dynamic content -->
+														<div class="technologies-dynamic-content ai-frame"
+															style="display: none;">
+															<div
+																class="d-flex p-5 flex-column text-uppercase dropdown-card-padding">
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/ai-ml-frameworks"
+																	fragment="tensorflow">TensorFlow</a>
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/ai-ml-frameworks"
+																	fragment="pytorch">PyTorch</a>
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/ai-ml-frameworks"
+																	fragment="scikit-learn">Scikit-learn</a>
+															</div>
+														</div>
+
+														<!-- ERP Platforms dynamic content -->
+														<div class="technologies-dynamic-content erp-platform"
+															style="display: none;">
+															<div
+																class="d-flex p-5 flex-column text-uppercase dropdown-card-padding">
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/erp-platforms" fragment="sap">SAP</a>
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/erp-platforms"
+																	fragment="oracle">Oracle</a>
+																<a class="subMenuItems py-2 sub-menu"
+																	routerLink="/erp-platforms"
+																	fragment="microsoft-dynamics">Microsoft
+																	Dynamics</a>
+															</div>
+														</div>
+
+													</div>
+												</div>
+
+
+												<div class="col-lg-4 p-5 bg-white">
+													<div class="third-column-container">
+														<!-- JavaScript sub-pages div -->
+														<div
+															class="d-flex flex-column text-uppercase third-column-content javascript-inner hidden">
+															<a class="subMenuItems py-2 sub-menu"
+																routerLink="/web-technologies"
+																fragment="react-angular-vue">React</a>
+															<a class="subMenuItems py-2 sub-menu"
+																routerLink="/web-technologies"
+																fragment="react-angular-vue">Angular</a>
+															<a class="subMenuItems py-2 sub-menu"
+																routerLink="/web-technologies"
+																fragment="react-angular-vue">Vue</a>
+														</div>
+
+														<!-- Default paragraph div -->
+														<div class="third-column-content default-para visible">
+															<p class="fw-bold fs-5">
+																Delivering cutting-edge IT solutions and emerging
+																technologies to drive efficiency, innovation, and
+																business success.
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+
+
+									<li class="menu-item-has-children position-relative">
+										<a href="#">Portals</a>
+										<div class="custom-megamenu-fullwidth">
+											<div class="row g-0">
+												<div class="col-lg-4">
+													<div
+														class="d-flex p-5 flex-column text-uppercase bg-light dropdown-card-padding ">
+
+														<a class="subMenuItems py-2" routerLink="/client-portal"
+															(click)="navigateToIndustry('client-portal')">Client
+															Portal</a>
+
+														<!-- <a class="subMenuItems py-2" routerLink="/employee-portal"
+															(click)="navigateToIndustry('/employee-portal')">Employee
+															Portal</a> -->
+
+														<a class="subMenuItems py-2"
+															href="https://www.trebecon.com/timesheets/login">Employee
+															Portal</a>
+
+
+													</div>
+												</div>
+												<div class="col-lg-4">
+													<div class="mt-3 mb-3">
+														<img src="assets/images/home/portal.webp" class="rounded"
+															alt="Trebecon">
+													</div>
+												</div>
+												<div class="col-lg-4 p-5 bg-white ">
+													<p class="fw-bold fs-5">
+														Clients can explore customized IT solutions,
+														while employees manage tasks, collaborate, and access
+														internal tools.
+													</p>
+												</div>
+											</div>
+										</div>
+									</li>
+
+									<li><a routerLink="/careers" (click)="navigateToIndustry('careers')">Careers</a>
+									</li>
+
+									<!-- 
+									<li class="menu-item-has-children">
+										<a href="#">Portals</a>
+										<ul class="sub-menu ">
+											<li><a routerLink="/client-portal"
+													(click)="navigateToIndustry('client-portal')">Client Portal </a>
+											</li>
+											<li><a routerLink="/employee-portal"
+													(click)="navigateToIndustry('employee-portal')">Employee Portal </a>
+											</li>
+
+
+										</ul>
+
+									</li> -->
+
+
+									<!-- <li><a routerLink="/client-portal">Client Portal </a></li> -->
+
+									<li><a routerLink="/news-events" (click)="navigateToIndustry('news-events')">News &
+											Events</a></li>
+
+
+								</ul>
+							</nav>
+						</div>
+
+						<div class="octf-col cta-col text-right">
+							<div class="octf-btn-cta">
+								<div class="octf-header-module cart-btn-hover">
+									<div class="site-header-cart">
+										<div class="widget woocommerce widget_shopping_cart">
+											<div class="widget_shopping_cart_content">
+												<p class="woocommerce-mini-cart__empty-message">No products in the cart.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="header_mobile">
+		<div class="container">
+			<div class="mlogo_wrapper clearfix">
+				<div class="mobile_logo">
+					<a routerLink="/" (click)="navigateToIndustry('/')">
+						<img src="assets/images/logo.png" alt="Trebecon" class="">
+					</a>
+				</div>
+				<div id="mmenu_toggle" (click)="toggleMobileMenu()" [class.active]="mobileMenuOpen">
+					<button></button>
+				</div>
+			</div>
+			<div class="mmenu_wrapper">
+				<div class="mobile_nav collapse" [class.show]="mobileMenuOpen">
+					<ul id="menu-main-menu" class="mobile_mainmenu">
+						<li>
+							<a routerLink="/" (click)="navigateToIndustry('/')">Home</a>
+						</li>
+						<li>
+							<a routerLink="/about" (click)="navigateToIndustry('/about')">About Us</a>
+						</li>
+
+
+
+						<li class="menu-item-has-children" [class.open]="mobileMenusubOpen1">
+							<span class="arrow" (click)="toggleMobileMenusub1()"><i
+									class="flaticon-right-arrow"></i></span>
+							<a href="#">Services</a>
+							<ul class="sub-menu" [class.show]="mobileMenusubOpen1">
+								<li>
+									<a routerLink="software-development-services"
+										(click)="navigateToService('/software-development-services')">Software
+										Development Services</a>
+									<ul>
+
+										<li>
+											<a routerLink="/software-development-services"
+												fragment="fixed-cost-product-solutions">Fixed-Cost Product Solutions
+											</a>
+										</li>
+
+										<li>
+											<a routerLink="/software-development-services"
+												fragment="custom-software-development">Custom
+												Software
+												Development
+											</a>
+										</li>
+										<li>
+											<a routerLink="/software-development-services"
+												fragment="mobile-app-development">Mobile & Web App
+												Development
+											</a>
+										</li>
+										<li>
+											<a routerLink="/software-development-services"
+												fragment="cloud-devops-services"> Cloud
+												& DevOps
+												Services
+											</a>
+										</li>
+
+										<li>
+											<a routerLink="/software-development-services" fragment="qa-automation"> QA
+												&
+												Automation
+											</a>
+										</li>
+										<li>
+											<a routerLink="/software-development-services"
+												fragment="data-analytics-ai">Data
+												Analytics & AI
+												>Data
+												Analytics & AI
+											</a>
+										</li>
+
+
+									</ul>
+								</li>
+
+								<li>
+									<a routerLink="it-staffing-services"
+										(click)="navigateToService('/it-staffing-services')">IT Staffing Services
+									</a>
+									<ul>
+
+										<li>
+											<a routerLink="/it-staffing-services"
+												fragment="flexible-engagement-models">Flexible Engagement Models
+											</a>
+										</li>
+										<li>
+											<a routerLink="/it-staffing-services" fragment="staff-augmentation">Staff
+												Augmentation
+											</a>
+										</li>
+										<li>
+											<a routerLink="/it-staffing-services"
+												fragment="contract-to-hire">Contract-to-Hire</a>
+										</li>
+										<li>
+											<a routerLink="/it-staffing-services" fragment="dedicated-teams">Dedicated
+												Teams</a>
+										</li>
+										<li>
+											<a routerLink="/it-staffing-services"
+												fragment="immigration-support">Immigration
+												Support
+											</a>
+										</li>
+										<li>
+											<a routerLink="/it-staffing-services"
+												fragment="managed-services-provider">Managed
+												Services
+												Provider
+											</a>
+										</li>
+										<li>
+											<a routerLink="/it-staffing-services"
+												fragment="direct-client-placements">Direct
+												Client
+												Placements
+											</a>
+										</li>
+									</ul>
+								</li>
+
+								<li>
+									<a routerLink="technology-services"
+										(click)="navigateToService('/technology-services')">Technology Services</a>
+									<ul>
+
+										<li>
+											<a routerLink="/technology-services" fragment="enterprise-sol">Enterprise
+												Solutions
+											</a>
+										</li>
+
+										<!-- <li><a href="<?php echo $_SERVER['technology-services.php']; ?>#business-process">Go to
+                                    About Section</a></li> -->
+										<li>
+											<a routerLink="/technology-services" fragment="emerging-tech">AI/ML &
+												Emerging Tech
+											</a>
+										</li>
+										<li>
+											<a routerLink="/technology-services" fragment="business-process">Business
+												Process
+												Outsourcing</a>
+										</li>
+
+									</ul>
+								</li>
+							</ul>
+						</li>
+
+						<li class="menu-item-has-children" [class.open]="mobileMenusubOpen">
+							<span class="arrow" (click)="toggleMobileMenusub()"><i
+									class="flaticon-right-arrow"></i></span>
+							<a href="#">Industries Served</a>
+							<ul [class.show]="mobileMenusubOpen">
+								<li>
+									<a routerLink="/insurance" (click)="navigateToIndustry('/insurance')">Insurance</a>
+								</li>
+								<li>
+									<a routerLink="/finance" (click)="navigateToIndustry('/finance')">Finance</a>
+								</li>
+								<li>
+									<a routerLink="/retail" (click)="navigateToIndustry('/retail')">Retail</a>
+								</li>
+								<li>
+									<a routerLink="health-care" (click)="navigateToIndustry('/health-care')">
+										Healthcare</a>
+								</li>
+								<li>
+									<a routerLink="energy-utilities"
+										(click)="navigateToIndustry('/energy-utilities')">Energy & Utilities</a>
+								</li>
+								<li>
+									<a routerLink="telecommunications"
+										(click)="navigateToIndustry('/telecommunications')">Telecommunications</a>
+								</li>
+								<li>
+									<a routerLink="public-sector" (click)="navigateToIndustry('/public-sector')">Public
+										Sector </a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="menu-item-has-children" [class.open]="mobileMenusubOpen2">
+							<span class="arrow" (click)="toggleMobileMenusub2()"><i
+									class="flaticon-right-arrow"></i></span>
+							<a href="#">Technologies</a>
+							<ul [class.show]="mobileMenusubOpen2">
+								<li>
+									<a routerLink="web-technologies"
+										(click)="navigateToTechnology('/web-technologies')">Web Technologies
+									</a>
+									<ul>
+										<li>
+											<a routerLink="/web-technologies" fragment="java-script">JavaScript
+											</a>
+											<ul>
+												<li>
+													<a routerLink="/web-technologies" fragment="react">React
+													</a>
+													<a routerLink="/web-technologies" fragment="angular">Angular
+													</a>
+													<a routerLink="/web-technologies" fragment="vue">Vue
+													</a>
+												</li>
+											</ul>
+											<a routerLink="/web-technologies" fragment=".net">.NET
+											</a>
+											<a routerLink="/web-technologies" fragment="java">Java
+											</a>
+											<a routerLink="/web-technologies" fragment="python">Python
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a routerLink="cloud-platforms"
+										(click)="navigateToTechnology('/cloud-platforms')">Cloud Platforms</a>
+									<ul>
+										<li>
+											<a routerLink="/cloud-platforms" fragment="amazon-web">AWS
+											</a>
+											<a routerLink="/cloud-platforms" fragment="microsoft">Azure
+											</a>
+											<a routerLink="/cloud-platforms" fragment="gcp-platform">Google Cloud
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a routerLink="data-analytics"
+										(click)="navigateToTechnology('/data-analytics')">Data & Analytics
+									</a>
+									<ul>
+										<li>
+											<a routerLink="/data-analytics" fragment="power-bi">Power BI
+											</a>
+											<a routerLink="/data-analytics" fragment="tableau">Tableau
+											</a>
+											<a routerLink="/data-analytics" fragment="snowflake">Snowflake
+											</a>
+										</li>
+									</ul>
+
+								</li>
+								<li>
+									<a routerLink="ai-ml-frameworks"
+										(click)="navigateToTechnology('/ai-ml-frameworks')">AI/ML Frameworks
+									</a>
+									<ul>
+										<li>
+											<a routerLink="/ai-ml-frameworks" fragment="tensorflow">TensorFlow
+											</a>
+											<a routerLink="/ai-ml-frameworks" fragment="pytorch">PyTorch
+											</a>
+											<a routerLink="/ai-ml-frameworks" fragment="scikit-learn">Scikit-learn
+											</a>
+										</li>
+									</ul>
+
+								</li>
+								<li>
+									<a routerLink="erp-platforms" (click)="navigateToTechnology('/erp-platforms')">ERP
+										Platforms</a>
+									<ul>
+										<li>
+											<a routerLink="/erp-platforms" fragment="sap">SAP
+											</a>
+											<a routerLink="/erp-platforms" fragment="oracle">Oracle
+											</a>
+											<a routerLink="/erp-platforms" fragment="microsoft-dynamics">Microsoft
+												Dynamics
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a routerLink="cybersecurity-tools"
+										(click)="navigateToTechnology('/cybersecurity-tools')">Cybersecurity Tools</a>
+									<ul>
+										<li>
+											<a routerLink="/cybersecurity-tools" fragment="siem">SIEM
+											</a>
+											<a routerLink="/cybersecurity-tools" fragment="endpoint">Endpoint Protection
+											</a>
+											<a routerLink="/cybersecurity-tools" fragment="identity">IAM
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a routerLink="/careers" (click)="navigateToIndustry('/careers')">Careers</a>
+						</li>
+						<li>
+							<a routerLink="/client-portal" (click)="navigateToIndustry('/client-portal')">Client Portal
+							</a>
+						</li>
+						<!-- <li>
+							<a href="/employee-portal" (click)="navigateToIndustry('/employee-portal')">Employee Portal
+							</a>
+						</li>  -->
+
+
+						<li>
+							<a href="https://www.trebecon.com/timesheets/login"
+								rel="noopener noreferrer" (click)="navigateToIndustry('/employee-portal')">
+								Employee Portal
+							</a>
+						</li>
+						<li>
+							<a routerLink="/news-events" (click)="navigateToIndustry('/news-events')">News & Events</a>
+						</li>
+						<li>
+							<a routerLink="/contact-us" (click)="navigateToIndustry('/contact-us')">Contact Us</a>
+						</li>
+						<!-- <li>
+							<a routerLink="/contact-us" (click)="navigateToIndustry('/contact-us')">Contact us</a>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

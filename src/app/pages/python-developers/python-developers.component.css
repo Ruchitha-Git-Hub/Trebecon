@@ -1,0 +1,97 @@
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Dimmed background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    animation: modal-fade-in 0.3s forwards;
+}
+
+/* Popup box */
+.popup-box {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(195, 212, 221, 0.3);
+    opacity: 0;
+    transform: translateY(-50px) scale(0.98);
+    animation: modal-slide-in 0.3s forwards;
+}
+
+@keyframes modal-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modal-slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.width100 {
+    width: 100%;
+}
+
+.octf-btn.octf-btn-primary {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.icon-btn {
+    background-color: #ffc109;
+    color: #fff;
+    padding: 10px 24px;
+    border: none;
+    font-weight: bold;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 10px;
+}
+
+.icon-btn:hover {
+    background-color: #43baff;
+    color: #fff;
+}
+
+.arrow {
+    font-size: 16px;
+    transition: transform 0.3s;
+}
+
+.icon-btn:hover .arrow {
+    transform: translateX(4px);
+}
+
+
+@media screen and (min-width: 768px) {
+ .section-content-wrapper.contact-area-inner.section-spacing{
+    margin-left: 12px !important;
+    margin-right: 12px !important;
+}
+    
+}

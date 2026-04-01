@@ -1,0 +1,12 @@
+.acc-content {
+  display: none;
+}
+.acc-item.current .acc-content {
+  display: block;
+}
+.acc-toggle {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}

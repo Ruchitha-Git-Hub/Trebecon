@@ -1,0 +1,60 @@
+.login-box {
+    background: linear-gradient(90deg, #00deff 0%, #0e4d80 100%);
+    padding: 50px 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin-top: 30px;
+
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid rgb(255 255 255 / 30%);
+    border-radius: 5px;
+    background-color: rgb(255 255 255 / 20%);
+    color: white !important;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background:transparent;
+   border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    color: white !important;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.login-box button:hover {
+   background: rgba(255, 255, 255, 0.1);
+    border-color: white !important;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.error {
+    margin-top: 10px;
+    color: red;
+    font-size: 14px;
+    display: none;
+}
+
+input[type=text]::placeholder {
+    color:rgba(255, 255, 255, 0.946);
+}
+
+input[type=password]::placeholder {
+    color:rgba(255, 255, 255, 0.946);
+}

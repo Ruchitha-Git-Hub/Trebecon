@@ -1,0 +1,200 @@
+/* Custom Country Dropdown Styles */
+.custom-country-dropdown {
+  position: relative;
+  width: 120px;
+  display: inline-block;
+  vertical-align: top;
+  z-index: 1000;
+}
+
+.selected-option {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  
+  border-radius: 6px 0 0 6px;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 48px;
+  box-sizing: border-box;
+  border-right: none;
+}
+
+/* .selected-option:hover {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+} */
+
+.custom-country-dropdown.open .selected-option {
+  /* border-color: #007bff;
+  border-radius: 6px 6px 0 0;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+  border-right: 1px solid #007bff; */
+}
+
+.flag-icon {
+  width: 24px;
+  height: 18px;
+  margin-right: 8px;
+  border-radius: 2px;
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.selected-option span {
+  flex: 1;
+  font-weight: 500;
+  color: #fff;
+  font-size: 14px;
+}
+
+.dropdown-arrow {
+  margin-left: auto;
+  color: #fff;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.custom-country-dropdown.open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 330px;
+  background: white;
+  border: 1px solid #007bff;
+  border-top: none;
+  border-radius: 0 6px 6px 6px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1001;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-option {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f0f0f0;
+  white-space: nowrap;
+}
+
+.dropdown-option:last-child {
+  border-bottom: none;
+}
+
+.dropdown-option:hover {
+  background-color: #f8f9fa;
+}
+
+.dropdown-option span {
+  font-size: 14px;
+  color: #333;
+  margin-left: 8px;
+}
+
+/* Phone number input styling */
+.phone-input-container {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.phone-input-container .custom-country-dropdown {
+  flex-shrink: 0;
+  margin-right: 0;
+}
+
+#phonenumber {
+  flex: 1;
+  padding: 12px 16px;
+  
+  border-radius: 0 6px 6px 0;
+  font-size: 14px;
+  height: 48px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  border-left: none;
+}
+
+#phonenumber:focus {
+  outline: none;
+  
+}
+
+/* When dropdown is open, adjust phone input */
+/* .custom-country-dropdown.open + #phonenumber {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+} */
+
+/* Container for country dropdown and phone input */
+.country-code {
+  position: relative;
+}
+
+.country-code label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .custom-country-dropdown {
+    width: 100px;
+  }
+  
+  .dropdown-options {
+    width: 250px;
+  }
+  
+  .selected-option {
+    padding: 10px 12px;
+    height: 44px;
+  }
+  
+  .dropdown-option {
+    padding: 10px 12px;
+  }
+  
+  .flag-icon {
+    width: 20px;
+    height: 15px;
+    margin-right: 6px;
+  }
+  
+  #phonenumber {
+    padding: 10px 12px;
+    height: 44px;
+  }
+}
+
+/* Custom scrollbar for dropdown */
+.dropdown-options::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dropdown-options::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.dropdown-options::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.dropdown-options::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Hide error spans initially */
+.error {
+  display: none;
+}

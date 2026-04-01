@@ -1,0 +1,11 @@
+ng version
+ng serve
+ng serve --open
+
+ng generate component pages/contact-us
+
+ng generate component pages/services/software-development
+
+
+ng generate component pages/technologies
+ng generate component pages/technologies/erp-platforms

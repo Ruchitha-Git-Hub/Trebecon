@@ -1,0 +1,194 @@
+<section class="about-team ps-1 pe-1">
+    <div class="container">
+        <div class="section-content-wrapper contact-area-inner section-spacing">
+            <div class="row col-rev">
+                <div class="col-lg-7 order-2 order-lg-1 px-4 px-lg-4 px-md-0">
+                    <div>
+                        <h1 class="section-title mb-3">
+                            Python Developers
+                        </h1>
+                        <p>
+                            Chicago, Illinois, USA | 04-06-2025
+                        </p>
+                        <hr>
+                    </div>
+
+                    <div class="mt-4 mt-lg-0">
+                        <p>A Python developer is responsible for designing, coding, and deploying server-side
+                            applications. This involves using Python and related technologies to build efficient,
+                            scalable, and robust backend systems, APIs, and integrations with front-end applications and
+                            databases.
+
+                        </p>
+
+
+                    </div>
+
+                    <div>
+
+                        <p><strong> Qualification: </strong> Any Graduation (B.Tech / B.E. in computer science or
+                            related field)
+                        </p>
+
+                        <p><strong> Experience: </strong>3+ years</p>
+
+                        <p><strong> Shift Type: </strong>Afternoon shift</p>
+
+                        <p><strong>Location: </strong> Chicago, Illinois, USA </p>
+                        <p><strong>Number of Openings: </strong>3</p>
+
+                        <h4 class="mt-3 mb-3">Job Description :</h4>
+                        <div class="ullist">
+                            <p><strong>Required Skills &amp; Qualifications:</strong></p>
+
+                            <ul>
+                                <li>Bachelor's degree in computer science, engineering, or a related field.
+
+                                </li>
+                                <li>4+ years of experience in software testing and test automation.
+                                </li>
+                                <li>Strong proficiency in Python, with working knowledge of Java and JavaScript.</li>
+                                <li>Experience with test automation frameworks such as PyTest, JUnit, and TestNG.
+                                </li>
+                                <li>Familiarity with RESTful APIs, API testing tools like Postman, and related
+                                    automation.
+
+                                </li>
+                                <li>Experience integrating automated tests with CI/CD tools, particularly GitLab CI.
+                                </li>
+                                <li>Hands-on experience with SonarQube, including setup, integration, and report
+                                    analysis.
+                                </li>
+                                <li>Experience using coding assistants (e.g., GitHub Copilot / GHCP) for generating
+                                    tests and improving productivity.</li>
+                                <li>Solid understanding of QA methodologies, software development life cycles, and Agile
+                                    practices.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <h4 class="mt-3 mb-3">Workplace :</h4>
+                        <p> Work From Office</p>
+
+                    </div>
+
+                    <div>
+                        <h4 class="mt-3 mb-3">Roles &amp; Responsibilities :</h4>
+
+                        <div class="ullist">
+                            <p> </p>
+                            <p><strong>Key Responsibilities:</strong></p>
+
+                            <ul>
+                                <li>Design, develop, and maintain automated test suites for API-centric applications.
+                                </li>
+
+                                <li> Collaborate with developers, QA engineers, and product managers to analyze
+                                    requirements and develop comprehensive test plans and test cases.
+                                </li>
+                                <li>Integrate automated tests into CI/CD pipelines to support continuous testing and
+                                    fast delivery cycles.
+                                </li>
+                                <li>Develop and enhance test automation frameworks, tools, and strategies for functional
+                                    and regression testing.
+
+                                </li>
+                                <li>Monitor and report on test coverage, test performance, and application reliability.
+                                </li>
+                                <li>Use SonarQube for static code analysis, integrating it with CI/CD tools and
+                                    customizing quality gates.
+                                </li>
+                                <li>Generate actionable reports on code quality, bugs, vulnerabilities, and code smells
+                                    using SonarQube.
+                                </li>
+                                <li>Utilize coding assistants (e.g., GitHub Copilot) to generate unit and functional
+                                    test code as needed.</li>
+                            </ul>
+                            <p></p>
+                        </div>
+                    </div>
+
+                 
+                </div>
+                <div class="col-lg-5 order-1 order-lg-2">
+                    <div class="popup-box">
+                        <div class="modal-header border-0 mb-3" style="padding: 0;">
+                            <h5 class="modal-title  " id="careerModalLabel" style="padding: 0;">Apply Now</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                                (click)="closePopup()">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="popup-content">
+                            <form #contactForm="ngForm" (ngSubmit)="submitApplication()">
+                                <div class="form-group">
+
+                                    <label for="name" class="d-block">Full Name <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" id="name" name="name" class="d-block width100"
+                                        [(ngModel)]="formData.name" (input)="clearError('name')" />
+                                    <span class="text-danger text-xs" *ngIf="formErrors.name">{{formErrors.name}}</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email " class="d-block"> Email Address <span
+                                            class="text-danger">*</span></label>
+                                    <input type="email" id="email" name="email" class="d-block width100"
+                                        [(ngModel)]="formData.email" (input)="clearError('email')" />
+                                    <span class="text-danger text-xs"
+                                        *ngIf="formErrors.email">{{formErrors.email}}</span>
+                                </div>
+                                <div class="form-group">
+
+                                    <label for="phonenumber" class="d-block"> Phone Number <span
+                                            class="text-danger">*</span></label>
+                                    <input type="number" id="phonenumber" name="email" class="d-block width100"
+                                        [(ngModel)]="formData.phonenumber" (input)="clearError('phonenumber')" />
+                                    <span class="text-danger text-xs"
+                                        *ngIf="formErrors.phonenumber">{{formErrors.phonenumber}}</span>
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label for="job_title" class="d-block"> Job Title <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" id="job_title" name="email" class="d-block width100"
+                                        [(ngModel)]="formData.job_title" (input)="clearError('job_title')" />
+                                    <span class="text-danger text-xs"
+                                        *ngIf="formErrors.job_title">{{formErrors.job_title}}</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Upload Resume <span class="text-danger">*</span></label>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="resumeUpload"
+                                            accept=".pdf,.doc,.docx" (change)="onFileChange($event)" />
+                                        <label class="custom-file-label" for="resumeUpload">Choose file </label>
+                                    </div>
+                                    <span *ngIf="selectedFile" class="text-info mt-2">
+                                        {{ selectedFile.name }}
+                                    </span>
+                                    <span class="text-danger text-xs" *ngIf="formErrors.resume">{{formErrors.resume}}
+                                        <br /></span>
+                                    <span class="text-success text-xs" *ngIf="successMessage">{{successMessage}}
+                                        <br /></span>
+                                    <span class="text-danger text-xs" *ngIf="errorMessage">{{errorMessage}}
+                                        <br /></span>
+                                </div>
+
+
+                                <button type="submit" class="octf-btn octf-btn-primary d-block">Submit
+                                    Application</button>
+                            </form>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>

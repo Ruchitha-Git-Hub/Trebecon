@@ -1,0 +1,7 @@
+ /* Reduce individual slide height */
+.home-client-carousel .partners-slide {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

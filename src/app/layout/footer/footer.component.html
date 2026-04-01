@@ -1,0 +1,156 @@
+<footer id="site-footer" class="site-footer footer-v1 about-team">
+   <div class="container">
+
+      <div class="row">
+         <div class="col-lg-8 col-md-12 order-2 order-lg-1">
+            <div class="row mb-5 ">
+               <div class="col-md-6 mb-md-0">
+                  <a routerLink="/">
+                     <img src="assets/images/client-logos/trebecon-white-logo.png" alt="" class="lazyloaded"
+                        data-ll-status="loaded">
+                  </a>
+
+               </div>
+
+            </div>
+            <div class="row">
+               <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 col-12">
+                  <div class="widget-footer">
+                     <h5 class="text-white">Useful Links</h5>
+                     <ul class="list-items">
+                        <li class="list-item"><a href="javascript:void(0)"
+                              (click)="navigateAndScrollToTop('/about')">About Us</a></li>
+                        <li class="list-item"><a href="javascript:void(0)"
+                              (click)="navigateAndScrollToTop('/careers')">Careers</a></li>
+                        <li class="list-item"><a href="javascript:void(0)"
+                              (click)="navigateAndScrollToTop('/contact-us')">Contact Us</a></li>
+                        <li class="list-item"><a href="javascript:void(0)"
+                              (click)="navigateAndScrollToTop('/client-portal')">Client Portal</a></li>
+                        <li class="list-item"><a href="javascript:void(0)"
+                              (click)="navigateAndScrollToTop('/employee-portal')">Employee Portal</a></li>
+                        <!--<li class="list-item"><a href="#">Privacy Policy</a></li>
+                  <li class="list-item"><a href="#">Terms and Conditions</a></li> -->
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-xl-5 col-lg-6 col-md-4 col-sm-6 col-12">
+                  <div class="widget-footer">
+                     <h5 class="text-white">Services</h5>
+                     <ul class="list-items">
+                        <li class="list-item"><a href="javascript:void(0)"
+                              (click)="navigateAndScrollToTop('/software-development-services')">Software Development
+                              Services</a></li>
+                        <!-- <li class="list-item"><a routerLink="/enterprise-resource-planning">Enterprise Resource
+                              Planning</a></li> -->
+                        <!-- <li class="list-item"><a href="technology-services.php">Technology Services </a></li> -->
+                        <!-- <li class="list-item"><a href="javascript:void(0)"
+                              (click)="navigateWithFragment('/technology-services', 'enterprise-sol')">Enterprise
+                              Solutions</a></li> -->
+                        <li class="list-item"><a href="javascript:void(0)"
+                              (click)="navigateAndScrollToTop('/it-staffing-services')">IT Staffing Services</a></li>
+                        <li class="list-item"><a href="javascript:void(0)"
+                              (click)="navigateAndScrollToTop('/technology-services')">Technology Services</a></li>
+
+
+
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6 col-12">
+                  <div class="widget-footer">
+                     <h5 class="text-white">Industries</h5>
+                     <ul class="list-items">
+                        <li class="list-item"><a href="javascript:void(0)"
+                              (click)="navigateAndScrollToTop('/insurance')">Insurance</a></li>
+                        <li class="list-item"><a href="javascript:void(0)"
+                              (click)="navigateAndScrollToTop('/energy-utilities')">Energy & Utilities</a></li>
+                        <li class="list-item"><a href="javascript:void(0)"
+                              (click)="navigateAndScrollToTop('/finance')">Finance</a></li>
+                        <li class="list-item"><a href="javascript:void(0)"
+                              (click)="navigateAndScrollToTop('/retail')">Retail</a></li>
+                        <li class="list-item"><a href="javascript:void(0)"
+                              (click)="navigateAndScrollToTop('/health-care')">Healthcare</a></li>
+                        <!-- <li class="list-item"><a href="javascript:void(0)"
+                              (click)="navigateAndScrollToTop('/telecommunications')">Telecommunications</a></li> -->
+
+                     </ul>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+         <div class="col-12 col-md-12 col-lg-4 order-1 order-lg-2">
+            <div class="row">
+
+               <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                  <div class="widget-footer">
+                     <!-- <h5 class="text-white">Subscribe</h5>
+                  <p>Follow our newsletter to stay updated  about agency.</p>
+                  <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-1343" method="post" action="newsletter.php">
+                      <div class="mc4wp-form-fields">
+                          <div class="subscribe-inner-form">
+                              <input type="email" name="email" placeholder="Your Email" required="">
+                              <button type="submit" class="subscribe-btn-icon"><i class="flaticon-telegram"></i></button>
+                          </div>  
+                      </div>
+                  </form> -->
+                     <div class="contact-form">
+                        <h2>Let's Talk</h2>
+                        <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
+                           <label for="name">Your Name</label>
+                           <input type="text" id="name" name="name" [(ngModel)]="formData.name"
+                              (input)="clearError('name')" />
+                           <span class="text-danger  text-xs" *ngIf="formErrors.name">{{formErrors.name}}</span>
+                           <label for="email">Your Email</label>
+                           <input type="email" id="email" name="email" [(ngModel)]="formData.email"
+                              (input)="clearError('email')" />
+                           <span class="text-danger text-xs" *ngIf="formErrors.email">{{formErrors.email}}</span>
+                           <label for="message">Your Message</label>
+                           <textarea id="message" name="message" [(ngModel)]="formData.message"
+                              (input)="clearError('message')"></textarea>
+
+                         
+                           <!-- <div class="captcha">
+                        <label>What is 3 + 4?</label>
+                        <input type="text"  required />
+                        <span class="refresh">🔄</span>
+                     </div> -->
+                           <button type="submit">Submit</button>
+                           
+                             <span class="text-danger  " *ngIf="formErrors.message">{{formErrors.message}}</span>
+                           <span class="text-danger" *ngIf="errorMessage"> {{errorMessage}}</span>
+                           <span class="text-success" *ngIf="successMessage"> {{successMessage}}</span>
+                           
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row copyright-area">
+         <div class="col-md-8">
+            <!-- <img src="assets/images/trebecon-white-logo.png" alt="" class="lazyloaded" data-ll-status="loaded"> -->
+            <p class="copyright-text"><span class="text-white"> Trebecon</span> © Copyright. 2020. All Rights Reserved.
+            </p>
+
+         </div>
+         <div class="col-md-4 footer-social-icons">
+            <ul class="social-list">
+               <li><a href="https://x.com/Trebecon" target="_self"><i class="fab fa-twitter"></i></a></li>
+               <li><a href="https://www.google.com/search?q=Trebecon&stick=H4sIAAAAAAAA_-NgU1I2qDBNTEk0NDdIs0w2STSxTLEyqDBKMzY0Nk8xNkxMTjWytFjEyhFSlJqUmpyfBwBjYHwEMgAAAA&hl=en&mat=CZyBASaWJyZxElcBYJahaSW2EebTRrcvXa-RiRU46bjcGEieqacpF6O032UuRv6FasuSB90z10qyBWpYq8JhG2uk-ro3qXy_JEfPIiNkQuRuKeYseW-iG5GG_QDMGdOgRsQ&authuser=0"
+                     target="_self"><i class="fab fa-google"></i></a></li>
+               <li><a href="https://www.linkedin.com/company/trebeconllc" target="_self"><i
+                        class="fab fa-linkedin-in"></i></a></li>
+               <li><a href="https://www.instagram.com/trebecon/" target="_self"><i class="fab fa-instagram"></i></a>
+               </li>
+            </ul>
+
+         </div>
+      </div>
+
+      <!-- <a id="back-to-top" href="#" class="show"><i class="flaticon-up-arrow"></i></a> -->
+   </div>
+    <a id="back-to-top"  [class.show]="showBackToTop"  (click)="navigateToIndustry()"><i class="flaticon-up-arrow"></i></a>
+</footer>

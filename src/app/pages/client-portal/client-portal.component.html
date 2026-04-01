@@ -1,0 +1,189 @@
+<div class="royal_preloader">
+    <div id="page" class="site">
+
+        <div id="content" class="site-content">
+            <div class="page-header flex-middle">
+                <div class="container">
+                    <div class="inner flex-middle">
+                        <h1 class="page-title">Client Portal </h1>
+                        <ul id="breadcrumbs" class="breadcrumbs none-style">
+                            <li><a routerLink="/">Home</a></li>
+                            <li class="active">Client Portal </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <section class="about-top">
+                <div class="container">
+                    <div class="row d-flex align-items-center client-row">
+                        <div class="col-md-6">
+                            <div class="img-top">
+                                <img class="partners_img" src="assets/images/client-logos/partners.webp"
+                                    alt="Fixitytech- Partners">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h2>Why do partners choose Trebecon?
+                            </h2>
+                            <div class="para_about_partners pad-lr-10">
+                                At Trebecon, we take pride in our partner-centric culture. We are committed to creating
+                                strong and loyal alliances with our partners and helping them grow with us. When you
+                                partner
+                                with us you get access to our services and technologies to get the right talent in your
+                                team
+                                and scale your business to scale new growth opportunities.
+                            </div>
+
+                            <div class="login-box">
+                                <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
+                                    <h2>Existing Client Login</h2>
+                                    <input type="text" id="username" placeholder="Email" name="email"
+                                        [(ngModel)]="formData.email" (input)="clearError('email')">
+                                    <div class="text-danger" *ngIf="formErrors.email">{{formErrors.email}}</div>
+                                    <input type="password" id="password" placeholder="Password" name="password"
+                                        [(ngModel)]="formData.password" (input)="clearError('password')">
+                                    <div class="text-danger" *ngIf="formErrors.password"> {{formErrors.password}}</div>
+
+                                    <div class="text-danger" *ngIf="errorMessage">❌ {{errorMessage}}</div>
+                                    <div class="text-danger"
+                                        style="margin-top: 10px; color: red; font-size: 14px;  line-height: 30px; letter-spacing: 1px; text-align: center;"
+                                        *ngIf="successMessage">❌ {{successMessage}}</div>
+                                    <button type="submit" [disabled]="formSubmitted">Login</button>
+                                    <p class="error" id="error-msg">❌ Invalid username or password</p>
+                                </form>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="about-team">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h2>We made some friends along the way</h2>
+                        </div>
+                        <div class="slider client-logos-slider">
+                            <div class="slide-viewer">
+                                <div class="row slide-group">
+
+                                    <div class="col-sm-3 col-6 aos-init aos-animate" data-aos="zoom-out"
+                                        data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000">
+
+                                        <img class="w-100" src="assets/images/client-logos/allegis.webp"
+                                            alt="partners_logo_one" loading="lazy">
+                                    </div>
+
+                                    <div class="col-sm-3 col-6 aos-init aos-animate" data-aos="zoom-out"
+                                        data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000">
+
+                                        <img class="w-100" src="assets/images/client-logos/adecco.webp"
+                                            alt="partners_logo_one" loading="lazy">
+                                    </div>
+
+                                    <div class="col-sm-3 col-6 aos-init aos-animate" data-aos="zoom-out"
+                                        data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000">
+
+                                        <img class="w-100" src="assets/images/client-logos/man-power.webp"
+                                            alt="partners_logo_one" loading="lazy">
+                                    </div>
+
+                                    <div class="col-sm-3 col-6 aos-init aos-animate" data-aos="zoom-out"
+                                        data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000">
+
+                                        <img class="w-100" src="assets/images/client-logos/robert.webp"
+                                            alt="partners_logo_one" loading="lazy">
+                                    </div>
+
+
+
+                                    <div class="col-sm-3 col-6 aos-init aos-animate" data-aos="zoom-out"
+                                        data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000">
+
+                                        <img class="w-100" src="assets/images/client-logos/kelly.webp"
+                                            alt="partners_logo_one" loading="lazy">
+                                    </div>
+
+                                    <div class="col-sm-3 col-6 aos-init aos-animate" data-aos="zoom-out"
+                                        data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000">
+
+                                        <img class="w-100" src="assets/images/client-logos/insight.webp"
+                                            alt="partners_logo_one" loading="lazy">
+                                    </div>
+
+                                    <div class="col-sm-3 col-6 aos-init aos-animate" data-aos="zoom-out"
+                                        data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000">
+
+                                        <img class="w-100" src="assets/images/client-logos/force.webp"
+                                            alt="partners_logo_one" loading="lazy">
+                                    </div>
+
+                                    <div class="col-sm-3 col-6 aos-init aos-animate" data-aos="zoom-out"
+                                        data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000">
+
+                                        <img class="w-100" src="assets/images/client-logos/apex.webp"
+                                            alt="partners_logo_one" loading="lazy">
+                                    </div>
+
+
+
+                                    <div class="col-sm-3 col-6 aos-init aos-animate" data-aos="zoom-out"
+                                        data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000">
+
+                                        <img class="w-100" src="assets/images/client-logos/akkodis.webp"
+                                            alt="partners_logo_one" loading="lazy">
+                                    </div>
+
+                                    <div class="col-sm-3 col-6 aos-init aos-animate" data-aos="zoom-out"
+                                        data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000">
+
+                                        <img class="w-100" src="assets/images/client-logos/beacon.webp"
+                                            alt="partners_logo_one" loading="lazy">
+                                    </div>
+
+                                    <div class="col-sm-3 col-6 aos-init aos-animate" data-aos="zoom-out"
+                                        data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000">
+
+                                        <img class="w-100" src="assets/images/client-logos/tcs.webp"
+                                            alt="partners_logo_one" loading="lazy">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="slide-buttons"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- <section class="about-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <div class="login-box">
+                                <form  #contactForm="ngForm" (ngSubmit)="onSubmit()" >
+                                <h2>Existing Client Login</h2>
+                                <input type="text" id="username" placeholder="Email"  name="email" [(ngModel)]="formData.email" (input)="clearError('email')">
+                                <div class="text-danger" *ngIf="formErrors.email">{{formErrors.email}}</div>
+                                <input type="password" id="password" placeholder="Password" name="password" [(ngModel)]="formData.password" (input)="clearError('password')">
+                                <div class="text-danger" *ngIf="formErrors.password"> {{formErrors.password}}</div>
+
+                                 <div class="text-danger" *ngIf="errorMessage">❌ {{errorMessage}}</div>
+                                    <div class="text-danger" style="margin-top: 10px; color: red; font-size: 14px;  line-height: 30px; letter-spacing: 1px; text-align: center;"  *ngIf="successMessage">❌ {{successMessage}}</div>
+                                <button type="submit" [disabled]="formSubmitted">Login</button>
+                                <p class="error" id="error-msg">❌ Invalid username or password</p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+        </div>
+    </div>
+
+
+</div>

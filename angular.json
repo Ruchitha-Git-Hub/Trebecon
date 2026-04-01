@@ -1,0 +1,142 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "my-angular18-site": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/my-angular18-site",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "src/public",
+                "output": "/"
+              }
+            ],
+            "styles": [
+              
+              "src/assets/css/style.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/font-awesome.min.css",
+              "src/assets/css/flaticon.css",
+              "src/assets/css/owl.carousel.min.css",
+              "src/assets/css/owl.theme.css",
+              "src/assets/css/magnific-popup.css",
+              "src/assets/css/royal-preload.css",
+              "src/assets/plugins/revolution/revolution/css/settings.css",
+              "src/assets/plugins/revolution/revolution/css/navigation.css",
+              "node_modules/owl.carousel/dist/assets/owl.carousel.min.css",
+              "node_modules/owl.carousel/dist/assets/owl.theme.default.min.css"
+            ],
+            "scripts": [
+              "src/assets/js/jquery.min.js",
+              "src/assets/plugins/revolution/revolution/js/jquery.themepunch.tools.min.js",
+              "src/assets/plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js",
+              "src/assets/plugins/revolution/revolution/js/extensions/revolution-plugin.js",
+              "src/assets/js/owl.carousel.min.js",
+              "src/assets/js/bootstrap.bundle.min.js",
+              "src/assets/js/jquery.magnific-popup.min.js",
+              "src/assets/js/jquery.isotope.min.js",
+              "src/assets/js/easypiechart.min.js",
+              "src/assets/js/jquery.countdown.min.js",
+              "src/assets/js/rev-script-2.js",
+              "src/assets/js/royal_preloader.min.js",
+              "src/assets/js/header-mobile.js",
+              "src/assets/js/other_scripts.js",
+              "src/assets/js/scripts.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "10MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "my-angular18-site:build:production"
+            },
+            "development": {
+              "buildTarget": "my-angular18-site:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
+              "src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "424155db-097c-4738-8b59-ddf484213614",
+    "schematicCollections": [
+      "angular-eslint"
+    ]
+  }
+}
